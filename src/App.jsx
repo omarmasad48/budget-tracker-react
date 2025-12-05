@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react' // <--- 1. Import useEffect
-
+   
+import { ExpenseChart } from './components/ExpenseChart';
 function App() {
   // 2. LOAD DATA: Check Local Storage first. If empty, use default list.
   const [transactions, setTransactions] = useState(() => {
@@ -66,6 +67,10 @@ function App() {
           <p className="money minus">-${expense}</p>
         </div>
       </div>
+<ExpenseChart income={income} expense={expense} />
+
+      
+      
 
       <h3>History</h3>
       <ul className="list">
